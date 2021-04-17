@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="alert alert-dismissible alert-warning">
+  <h4 class="alert-heading center">Only Admins can be able to add new Placements</h4>
+</div>
+<form (submit) = "onJobSubmit()">
+    <legend>Add Job</legend>
+    <div class="form-group">
+      <label for="companyname">Company Name</label>
+      <input type="text" class="form-control" id="companyname" [(ngModel)]="company_name" name="company_name" placeholder="Enter Company Name">
+    </div>
+    <div class="form-group">
+      <label for="job_type">Type of Placement</label>
+      <input type="text" class="form-control" id="job_type" [(ngModel)]="job_type" name="job_type" placeholder="Intership/ Full-Time/ Part-Time">
+    </div>
+    <div class="form-group">
+      <label for="position">Position</label>
+      <input type="text" class="form-control" id="position" [(ngModel)]="position" name="position" aria-describedby="emailHelp" placeholder="Eg: Web Developer">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" [(ngModel)]="description" name="description" id="description" rows="3" placeholder="Description..."></textarea>
+    </div>
+    <div class="form-group">
+        <label for="apply_by">Apply By</label>
+        <input type="text" class="form-control" id="apply_by" [(ngModel)]="apply_by" name="apply_by" placeholder="Last Date to Apply">
+    </div>
+    <div class="form-group">
+        <label for="company_website">Company Website</label>
+        <input type="text" class="form-control" id="company_website" [(ngModel)]="company_website" name="company_website" placeholder="Enter Company Website">
+    </div>
+    <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="text" class="form-control" id="salary" [(ngModel)]="salary" name="salary" placeholder="Enter Salary in INR">
+    </div>
+    <div class="form-group">
+      <label for="skills">Skills</label>
+      <input type="text" class="form-control" id="skills" [(ngModel)]="skills" name="skills" placeholder="Enter Skill separated by comma">
+    </div>
+    <div class="form-group">
+      <label for="company_reg">Company Application Link</label>
+      <input type="text" class="form-control" id="company_reg" [(ngModel)]="company_reg" name="company_reg" placeholder="Enter the link on which we have to apply">
+    </div>
+    <div class="form-group">
+      <label for="college_reg">College Application Link</label>
+      <input type="text" class="form-control" id="college_reg" [(ngModel)]="college_reg" name="college_reg" placeholder="Enter College link to be filled for the same">
+    </div>
+    <button type="submit" class="btn btn-primary">Add This Job</button>
+  </form>
+  

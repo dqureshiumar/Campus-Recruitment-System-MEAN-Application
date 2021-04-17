@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <div class="alert alert-dismissible alert-warning">
+        <h4 class="alert-heading">All Current Jobs</h4>
+        <p class="mb-0">Visit our Campus WebApp daily to get notified about the latest Job/Internship Oppurtunities</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6" *ngFor="let job of allJobs">
+            <div class="card mb-3">
+                <h3 class="card-header">{{ job.company_name }}</h3>
+                <div class="card-body">
+                    <h5 class="card-title">{{ job.job_type }}</h5>
+                    <h6 class="card-subtitle text-muted">{{job.position}}</h6>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{job.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Skills Required : <span *ngFor="let skill of job.skills?.split(',')"><span class="badge badge-pill badge-info">{{skill}}</span>&nbsp;</span> </li>
+                    <li class="list-group-item">Apply By : {{ job.apply_by }}</li>
+                    <li class="list-group-item">Website : {{ job.company_website }}</li>
+                    <li class="list-group-item">Salary : {{ job.salary }} INR</li>
+                </ul>
+                <div class="card-body">
+                    <button (click)="goToCollegeURL(job.college_reg)" class="card-link btn btn-primary">College Apply Link</button>
+                    <button (click)="goToCompanyURL(job.company_reg)" class="card-link btn btn-success">Company Apply Link</button>
+                </div>
+                <div class="card-footer text-muted">
+                    Published : {{job.posted_on | date}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<br>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div *ngIf="user">
+            <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+                <div class="card-header">@{{user.username}}</div>
+                <div class="card-body">
+                    <h4 class="card-title">Name : {{user.name}}</h4>
+                    <p class="card-text">Email : {{user.email}}</p>
+                    <p class="card-text">Portfolio : {{user.portfolio}}</p>
+                    <p class="card-text">LinkedIn : {{user.linkedin}}</p>
+                    <p class="card-text">Codechef : {{user.codechef}}</p>
+                    <p class="card-text">Codeforces : {{user.codeforces}}</p>
+                    <p class="card-text">Hackerrank : {{user.hackerrank}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

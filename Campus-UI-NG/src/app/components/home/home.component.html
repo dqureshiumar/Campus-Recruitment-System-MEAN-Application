@@ -1,0 +1,29 @@
+<div class="container">  
+  <div class="alert alert-dismissible alert-warning">
+    <h4 class="alert-heading">Campus Recruitment System</h4>
+    <p class="mb-0">Connecting our talented students via Web application to ease the placement process</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Student</div>
+        <div class="card-body">
+          <h4 class="card-title">Student can login to apply to campus placements</h4>
+          <p class="card-text">Give a quick edge to our Students for getting placed in good reputed companies
+          </p>
+          <a [routerLink]="['/user/register']" class="btn btn-secondary">Apply as a Student</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card bg-secondary mb-3" style="max-width: 20rem;">
+        <div class="card-header">Company</div>
+        <div class="card-body">
+            <h4 class="card-title">Companies at Thakur College of Engg & Tech</h4>
+            <p class="card-text">Get to know the list of Companies at Thakur College of Engineering and Technology</p>
+            <a [routerLink]="['/company/listing']" class="btn btn-primary">Company Section</a>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

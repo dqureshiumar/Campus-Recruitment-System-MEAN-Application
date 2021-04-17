@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<form (submit) = "onRegisterSubmit()">
+    <legend>Registration</legend>
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input type="text" class="form-control" id="fullname" [(ngModel)]="name" name="name" placeholder="Enter your full name">
+    </div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="linkedin_handle">LinkedIn Profile</label>
+        <input type="text" class="form-control" id="linkedin_handle" [(ngModel)]="linkedin" name="linkedin" placeholder="Enter LinkedIn URL">
+    </div>
+    <div class="form-group">
+        <label for="github_handle">Github Profile</label>
+        <input type="text" class="form-control" id="github_handle" [(ngModel)]="github" name="github" placeholder="Enter Github URL">
+    </div>
+    <div class="form-group">
+        <label for="portfolio_handle">Portfolio or Resume</label>
+        <input type="text" class="form-control" id="portfolio_handle" [(ngModel)]="portfolio" name="portfolio" placeholder="Enter Portfolio or Resume URL">
+    </div>
+    <div class="form-group">
+      <label for="codechef_handle">Codechef Handle</label>
+      <input type="text" class="form-control" id="codechef_handle" [(ngModel)]="codechef" name="codechef" placeholder="Enter Codechef Username">
+    </div>
+    <div class="form-group">
+      <label for="codeforces_handle">Codeforces Handle</label>
+      <input type="text" class="form-control" id="codeforces_handle" [(ngModel)]="codeforces" name="codeforces" placeholder="Enter Codeforces Username">
+    </div>
+    <div class="form-group">
+      <label for="hackerrank_handle">Hackerrank Handle</label>
+      <input type="text" class="form-control" id="hackerrank_handle" [(ngModel)]="hackerrank" name="hackerrank" placeholder="Enter Hackerrank Username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
